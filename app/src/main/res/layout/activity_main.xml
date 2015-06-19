@@ -1,0 +1,90 @@
+<com.map.pandora.widget.MapContainerView_ xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/idle_tap"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="to_search"
+            android:src="@drawable/search_idle_bar" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="to_search"
+            android:text="@string/tap_search"
+            android:textColor="@color/font_black" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/voice_idle_bar"
+            android:clickable="true"
+            android:onClick="onVoice"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_superfromto_item"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="to_routeplan">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="4dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/tips_route_new"
+                android:text="路线"
+                android:textColor="@color/font_black" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="4dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:onClick="to_more"
+                android:drawableLeft="@drawable/tips_more"
+                android:text="更多"
+                android:textColor="@color/font_black" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+</com.map.pandora.widget.MapContainerView_>
+
+
+

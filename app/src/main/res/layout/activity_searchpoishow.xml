@@ -1,0 +1,45 @@
+<com.map.pandora.widget.MapContainerView_ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapcontainerview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/search_input_framebg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingRight="8dp"
+        android:paddingTop="6dp">
+
+    <ImageButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@null"
+        android:onClick="onBack"
+        android:src="@drawable/default_common_navibar_prev" />
+
+        <TextView
+            android:id="@+id/tv_search_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_input_framebg"
+            android:drawableLeft="@drawable/search_idle_bar"
+            android:singleLine="true"
+            android:textSize="@dimen/font_14"
+            android:clickable="true"
+            android:onClick="to_search"/>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+            android:id="@id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+
+</com.map.pandora.widget.MapContainerView_>

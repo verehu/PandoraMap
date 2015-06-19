@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rg_maplayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_maplayer_2d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/maplayer_manager_2d_btn"
+                android:button="@null" />
+
+
+            <com.map.pandora.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/rb_maplayer_3d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/maplayer_manager_3d_btn"
+                android:button="@null" />
+
+
+            <com.map.pandora.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/rb_maplayer_sate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/maplayer_manager_sate_btn"
+                android:button="@null" />
+
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

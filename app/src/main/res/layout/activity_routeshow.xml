@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/search_input_framebg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingRight="8dp"
+        android:paddingTop="6dp">
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:onClick="onBack"
+            android:src="@drawable/default_common_navibar_prev" />
+
+        <RadioGroup
+            android:id="@+id/rg_planway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_plan_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/rbtn_route_car"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_plan_bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rbtn_route_bus"
+                android:button="@null"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_plan_onfoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:background="@drawable/rbtn_route_onfoot"
+                android:button="@null" />
+
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/search_input_framebg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingRight="8dp"
+        android:paddingTop="6dp">
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:onClick="onBack"
+            android:src="@drawable/default_common_navibar_prev" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/idle_title_search_input_bg"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_search_input"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="搜索"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img_text_clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onCleanText"
+                android:src="@drawable/search_input_clean" />
+
+            <ProgressBar
+                android:id="@+id/pro_searching"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/idle_tap_divider" />
+
+            <LinearLayout
+                android:id="@+id/ll_subtn_container"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/img_voice"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:src="@drawable/voice_btn_normal"
+                    android:onClick="onVoice"/>
+
+                <Button
+                    android:id="@+id/btn_search"
+                    style="@style/common_search_btn"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:onClick="onSearch"
+                    android:text="搜索" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_history_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:gravity="center_horizontal"
+            android:text="支持地点、公交、地铁、行政区搜索，更有智能语音\n识别喔" />
+
+        <ListView
+            android:id="@+id/lv_poiHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_suggest_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.map.pandora.widget.MapContainerView_  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapcontainerview"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+</com.map.pandora.widget.MapContainerView_ >
